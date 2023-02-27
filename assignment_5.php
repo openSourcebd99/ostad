@@ -99,12 +99,11 @@
       $person2->setEmail($emailErr);
     } else {
       $email = test_input($_POST["email"]);
-
       $person2->setEmail($email);
     }
   }
-  echo "Name: " . $person2->getName() . "</br>";
-  echo "Email: " . $person2->getEmail() . "<br>";
+  echo "Name: " . $person2->getName() . "<br />";
+  echo "Email: " . $person2->getEmail() . "<br />";
   ?>
 </body>
 
