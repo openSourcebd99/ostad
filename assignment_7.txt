@@ -1,1 +1,50 @@
+employees: id, name, age, salary, department_id
 
+
+departments: id, name, manager
+
+---------------------------------
+Using employees table
+
+a. Write a query to select all columns and rows from the employees table.
+-> SELECT * FROM employees;
+Explantion: Shows all data from employees table. * means all Data. After FROM clause specifying Table Name. 
+
+b. Write a query to select only the name and salary columns of all employees with a salary greater than 50000.
+-> SELECT name, salary FROM employees WHERE salary > 50000;
+Explantion: Using SELECT and colum names for specific data and WHERE clause for condition.
+
+c. Write a query to calculate the average salary of all employees.
+-> SELECT AVG(salary) as average_salary FROM employees;
+Explantion: AVG() is aggregator and after as keyword using aliias name of column
+
+d. Write a query to count the number of employees who work in the "Marketing" department.
+-> SELECT count(*) as number_of_employees FROM employees e JOIN departments d ON e.department_id = d.id WHERE d.name = 'Marketing';
+Explantion: Joining two tables based on condition after ON clause. And also providing filtering condtion after WHERE clause.
+
+e. Write a query to update the salary column of the employee with an id of 1001 to 60000.
+-> UPDATE employees SET salary = 60000 WHERE id = 1001;
+Explantion: After UPDATE clause specifying table name and after SET specifying updated value of the cloumn
+
+f. Write a query to delete all employees whose salary is less than 30000.
+-> DELETE FROM employees WHERE salary < 30000;
+Explantion: DELETE all rows from table with matching condition after WHERE clause
+
+---------------
+Using departments table
+
+a. Write a query to select all columns and rows from the departments table.
+-> SELECT * FROM departments;
+Explantion: Shows all data from departments table. * means all Data. After FROM clause specifying Table Name. 
+
+b. Write a query to select only the name and manager columns of the "Finance" department.
+-> SELECT name, manager FROM departments WHERE name = 'Finance';
+Explantion: Using SELECT and colum names for specific data and WHERE clause for condition.
+
+c. Write a query to calculate the total number of employees in each department.
+-> SELECT d.name, COUNT(*) AS num_of_employees FROM employees e JOIN departments d ON e.department_id = d.id GROUP BY d.name;
+Explantion: Joining two tables based on condition after ON clause. Using GROUP BY clause for grouping data.
+
+d. Write a query to insert a new department called "Research" with a manager named "John Doe".
+-> INSERT INTO departments (name, manager) VALUES ('Research', 'John Doe');
+Explantion: After INSERT INTO clause we are specifying table name and After VALUES clause providing associative data.
