@@ -1,3 +1,5 @@
+# Part 1
+
 # Laravel Installation with Sample Hello World Project
 
 ## First Step
@@ -38,3 +40,7 @@ Route::get('/hello', function () {
 ```
 
 <img width="1334" alt="4)hello_world_route" src="https://github.com/openSourcebd99/ostad/assets/125869281/68290c64-15ba-4d5f-8abc-5382f9fef050">
+
+# Part 2 (Directory Description)
+
+[Directory Description Link](https://github.com/openSourcebd99/ostad/blob/main/assignment_13/directory_discription.md)
