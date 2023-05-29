@@ -168,4 +168,8 @@ class DemoController extends Controller
     $request->session()->flush();
     return true;
   }
+  public function middlewareDemoAction(Request $request): string
+  {
+    return "Hello from middleware demo";
+  }
 }

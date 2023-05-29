@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Middleware\Demo;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DemoController;
 
@@ -32,3 +33,7 @@ Route::get('/go-to-google', [DemoController::class, 'goToGoogle']);
 Route::get('/show-file-binary', [DemoController::class, 'showFileBinary']);
 Route::get('/download-file', [DemoController::class, 'downloadFile']);
 Route::get('/sample-page', [DemoController::class, 'getSamplePage']);
+Route::get(
+  '/middleware-demo',
+  [DemoController::class, 'middlewareDemoAction']
+)->middleware([Demo::class]);
